@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Photo-Bonanza</title>
+
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/Test.css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    
+	<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=NTR' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Photography <span>Website </span>PICTURE<span>-BONANZA</span></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#mainCarousel">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+   
+                    <li>
+                        <a href="login.php">Log In</a>
+
+                    </li>
+
+
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <style>
+    
+    	.navbar-default {
+    		background-color: transparent;
+    		border-color: transparent;
+    		-webkit-transition: all 0.5s ease 0s;
+  			-o-transition: all 0.5s ease 0s;
+  			transition: all 0.5s ease 0s;
+    	}
+    	
+    	.navbar-nav { 
+    		margin-top: 40px;
+    		float: right;
+    	}
+    	
+    	@media screen and (max-width: 767px) {
+    	.navbar-nav {
+    		float: none;
+    		text-align: center;
+    		background: rgba(25, 33, 60, 0.5);
+    	}
+    	}
+    	
+    	.navbar-default .navbar-brand {
+    		margin-top: 40px;
+    		font-size: 28px;
+    		font-family: 'Righteous', cursive;
+    		color: #fff;
+    		letter-spacing: 1px;
+    		-moz-transition:color .5s ease-in;
+   			-o-transition:color .5s ease-in;
+    		-webkit-transition:color .5s ease-in;
+    	}
+    	
+    	.navbar-default .navbar-brand span {
+    		color: #42a5f6;
+    		-moz-transition:color .5s ease-in;
+   			-o-transition:color .5s ease-in;
+    		-webkit-transition:color .5s ease-in;
+    	}
+    	
+    	@media screen and (max-width: 400px) {
+    	.navbar-default .navbar-brand {
+    		font-size: 22px;
+    	}
+    	}
+    	
+    	.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand span:hover {
+    		color: #3D99B8;
+    	}
+    	
+    	.navbar-default .navbar-nav>li>a {
+    		color: #fff;
+    		font-size: 14px;
+    		font-family: 'Noto Sans', sans-serif;
+    		text-transform: uppercase;
+    		letter-spacing: 1px;
+    	}
+    	
+    	.navbar-default .navbar-nav>li>a:hover {
+    		color: #42a5f6;
+    	}
+    	
+    	.navbar-default .navbar-nav>li>a:focus {
+    		color: #42a5f6;
+    	}
+    	
+    	.navbar-default .navbar-toggle {
+    		margin-top: 40px;
+    		border: none;
+    	}
+    	
+		.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+			background: none;
+		}
+    	
+    	.navbar-default .navbar-toggle .icon-bar {
+    		height: 4px;
+    		width: 28px;
+    		background: #42a5f6;
+		}
+    	
+    	.navbar-default.shrink {
+    		background:rgba(25, 33, 60, 0.8)
+		}
+		
+		.navbar-default.shrink .navbar-nav {
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		
+		.navbar-default.shrink .navbar-brand {
+			margin-top: 20px;
+		}
+		
+		.navbar-default.shrink .navbar-toggle {
+			margin-top: 25px;
+		}
+
+    
+    </style>
+
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="mainCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mainCarousel" data-slide-to="1"></li>
+            <li data-target="#mainCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+            <div class="slider_overlay"></div>
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/billy-huynh-W8KTS-mhFUE-unsplash.jpg');">
+                    <div class="hero">
+                        <hgroup>
+                            <h1>Hi, welcome to this Picture-Bonanza</h1>
+                            <h3>Get started below for Amazing Content !!!</h3>
+                        </hgroup>
+                      <!--  <button onlclick="register.html">Sign Up Now !!</button> --!>
+  			<button id="myBtn"/> Sign Up Now !!
+		    <script>
+     			 document.getElementById("myBtn").addEventListener("click", myFunction);
+    				  function myFunction() {
+       			 window.location.href="register.php";
+     				 }
+    </script>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+
+            <div class="slider_overlay"></div>
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/sun.jpg');">
+                    <div class="hero">
+                        <hgroup>
+                            <h1>Get Exclusive Pictures !!! </h1>
+                            <h3>And photography tips.</h3>
+
+                        </hgroup>
+                    </div>
+                </div>
+            </div>
+            <div class="item">    
+            <div class="slider_overlay"></div>
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/marek-okon-L4h2cvheWuc-unsplash.jpg');">
+                    <div class="hero">
+                        <hgroup>
+                            <h1>Real life experinces and more..</h1>
+                            <h3>This is the blogger ground.</h3>
+                        </hgroup>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            
+        <!-- Controls -->
+        <a class="left carousel-control" href="#mainCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#mainCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+    
+    <div id="about">
+    	<div class="container">
+    		<div class="text">
+    			<h2>About ME</h2>
+    			<hr>
+    			<p>I am an photographer based in LA, United States. I have been travelling the world capturing beautiful nature in my camera. I have travlled 120 beautiful countries so far and on the way to explore more.</p>
+			<p>Met so many sweet people during these trips, I always wanted to showcase my work to the world so here it is my website. You can checkout my work here mostly free and also download these for your wallpaper etc. Have Fun.</p>
+			</div>
+
+        <div class="col-md-6">
+            <!-- begin panel group -->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                
+                <!-- panel 1 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab1" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingOne"data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h4 class="panel-title">Autumn</h4>
+                        </div>
+                    </span>
+                    
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                        <!-- Tab content goes here -->
+                        <p>Autumn is the season when the duration of daylight becomes noticeably shorter and the temperature cools considerably. Day length decreases and night length increases as the season progresses until the Winter Solstice in December (Northern Hemisphere) and June (Southern Hemisphere).</p>
+                        <p> One of its main features in temperate climates is the striking change in colour for the leaves of deciduous trees as they prepare to shed.</p>
+                        </div>
+                    </div>
+                </div> 
+                <!-- / panel 1 -->
+                
+                <!-- panel 2 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h4 class="panel-title collapsed">Summer</h4>
+                        </div>
+                    </span>
+
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                        <!-- Tab content goes here -->
+                        <p>At or centred on the summer solstice, the earliest sunrise and latest sunset occurs, daylight hours are longest and dark hours are shortest, with day length decreasing as the season progresses after the solstice.</p>
+                        <p>The date of the beginning of summer varies according to climate, tradition, and culture. When it is summer in the Northern Hemisphere, it is winter in the Southern Hemisphere, and vice versa.</p>
+			 </div>
+                    </div>
+                </div>
+                <!-- / panel 2 -->
+                
+                <!--  panel 3 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab3" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h4 class="panel-title">Winter</h4>
+                        </div>
+                    </span>
+
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                          <!-- tab content goes here -->
+                        <p>In many regions, winter brings snow and freezing temperatures. The moment of winter solstice is when the Sun's elevation with respect to the North or South Pole is at its most negative value; that is, the Sun is at its farthest below the horizon as measured from the pole.</p>
+                        <p>The earliest sunset and latest sunrise dates outside the polar regions differ from the date of the winter solstice and depend on latitude. They differ due to the variation in the solar day throughout the year caused by the Earth's elliptical orbit (see earliest and latest sunrise and sunset).</p>
+                          </div>
+                        </div>
+                      </div>
+            	</div>
+             </div> 
+             
+   	 		 <div class="col-md-6">
+    			<div id="carousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+					<ol class="carousel-indicators">
+			  			<li data-target="#carousel" data-slide-to="0" class="active"></li>
+			    		<li data-target="#carousel" data-slide-to="1"></li>
+			    		<li data-target="#carousel" data-slide-to="2"></li>
+			    		<li data-target="#carousel" data-slide-to="3"></li>
+			    		<li data-target="#carousel" data-slide-to="4"></li>
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+			    		<div class="item active">
+			    			<img src="images/beach/raph-howald.jpg" alt="First slide">
+			    		</div>
+			    		<div class="item">
+			    			<img src="images/beach/frank-mckenna.jpg" alt="Second slide">
+			    		</div>
+			    		<div class="item">
+			    			<img src="images/beach/elizeu-dias.jpg" alt="Third slide">
+			    		</div>
+			    		<div class="item">
+			    			<img src="images/flower/vladimir-malyutin.jpg" alt="Third slide">
+			    		</div>
+			    		<div class="item">
+			    			<img src="images/flower/white-rainforest.jpg" alt="Third slide">
+			    		</div>
+					</div>
+				</div>
+			</div>
+             
+        </div>
+    </div>
+    
+    
+    <div id="portfolio">
+    	<div class="container">
+    		<h2>My Portfolio</h2>
+    		<p>These are some of amazing pictures i had opportunity to capture while on tour.</p>
+      			<div class="portfolioFilter">  
+        			<ul class="Portfolio-nav wow fadeIn delay-02s">
+        				<li><a href="#" data-filter="*" class="current" >All</a></li>
+            			<li><a href="#" data-filter=".autumn" >Autumn</a></li>
+            			<li><a href="#" data-filter=".summer" >Summer</a></li>
+            			<li><a href="#" data-filter=".winter" >Winter</a></li>
+        			</ul>
+       			</div> 
+    	</div>
+    	
+       		<div class="portfolioContainer">
+
+            	<div class=" Portfolio-box summer">
+                	<a href="#"><img src="images/Summer/content-pixie-VIh-B-bNZMc-unsplash.jpg" alt=""></a>	
+                </div>
+                <div class="Portfolio-box winter">
+                	<a href="#"><img src="images/Winter/aaron-burden--WIfIvpVXAM-unsplash.jpg" alt=""></a>	
+                </div>
+                <div class=" Portfolio-box autumn">
+                	<a href="#"><img src="images/Fall/brianna-tucker-xtpQx26ABbM-unsplash.jpg" alt="Pumpkins in Nevada"></a>	
+                </div>
+
+                <div class=" Portfolio-box summer">
+                	<a href="#"><img src="images/Summer/toni-cuenca-55MySYrKf5w-unsplash.jpg" alt=""></a>	
+                </div>
+                <div class=" Portfolio-box summer">
+                	<a href="#"><img src="images/Summer/luke-dean-weymark-o_rKNRoNz8s-unsplash.jpg" alt=""></a>	
+                </div>
+			
+			
+
+
+                <div class=" Portfolio-box winter" >
+                	<a href="#"><img src="images/Winter/charles-tyler-NT-SZNVl8co-unsplash.jpg" alt=""></a>	
+                </div>
+                <div class=" Portfolio-box winter" >
+                	<a href="#"><img src="images/Winter/ezra-jeffrey-comeau-iughe2qhjVs-unsplash.jpg" alt=""></a>	
+                </div>
+
+
+
+                <div class=" Portfolio-box autumn">
+                	<a href="#"><img src="images/Fall/nathan-anderson-udJMd2z_4rk-unsplash.jpg" alt=""></a>	
+                </div>
+		<div class=" Portfolio-box autumn">
+                	<a href="#"><img src="images/Fall/tim-gouw-UU7H4SOwEho-unsplash.jpg" alt=""></a>	
+                </div>
+
+
+    		</div>
+    	
+    </div>
+    
+     
+    <div id="blog">
+    	<div class="container">
+    		<h2>Latest <span>Blog</span> Posts</h2>
+    		<hr>
+    		<div class="carousel slide" id="myCarousel">
+        		<div class="carousel-inner">
+           			<div class="item active">
+            		 	<ul class="thumbnails">
+                        	<li class="col-sm-4">
+    							<div class="fff">
+									<div class="thumbnail">
+										<a href="#"><img src="images/flower/vladimir-malyutin.jpg" alt=""></a>
+									</div>
+									<div class="caption">
+										<h4>Flowers Around the World</h4>
+										<p>Flower is from the Middle English flour, which referred to both the ground grain and the reproductive structure in plants, before splitting off in the 17th century. It comes originally from the Latin name of the Italian goddess of flowers, Flora. The early word for flower in English was blossom, though it now refers to flowers only of fruit trees.</p>
+										<a class="btn btn-mini" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+									</div>
+                           	 	</div>
+                        	</li>
+                        	<li class="col-sm-4">
+								<div class="fff">
+									<div class="thumbnail">
+										<a href="#"><img src="images/lukasz-lada.jpg" alt=""></a>
+									</div>
+									<div class="caption">
+										<h4>Far From Home</h4>
+										<p>How to take some of the best cloud pictures and what not to do ??</p>
+										<a class="btn btn-mini" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+									</div>
+                            	</div>
+                        	</li>
+                        	<li class="col-sm-4">
+								<div class="fff">
+									<div class="thumbnail">
+										<a href="#"><img src="images/flower/white-rainforest.jpg" alt=""></a>
+									</div>
+									<div class="caption">
+										<h4>Rainforests are most amazing places one can visit.</h4>
+										<p>I have been to this rainforest in brazil and it changed my life, read more to know how...</p>
+										<a class="btn btn-mini" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+									</div>
+                            	</div>
+                        	</li>
+                    	</ul>
+             		</div><!-- /Slide1 --> 
+            		<div class="item">
+                    	<ul class="thumbnails">
+                       		<li class="col-sm-4">
+								<div class="fff">
+									<div class="thumbnail">
+										<a href="#"><img src="images/summer/luke-dean-weymark-o_rKNRoNz8s-unsplash.jpg" alt=""></a>
+									</div>
+									<div class="caption">
+										<h4>More Things Natural</h4>
+										<p>Unkown Beaches around the World are hard to find so here's small list for you rest only for premium subsribers.</p>
+										<a class="btn btn-mini" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+									</div>
+                            	</div>
+                        	</li>
+                        	<li class="col-sm-4">
+								<div class="fff">
+									<div class="thumbnail">
+										<a href="#"><img src="images/marek-okon-L4h2cvheWuc-unsplash.jpg" alt=""></a>
+									</div>
+									<div class="caption">
+										<h4>What's scary about taking astronomical pictures...</h4>
+										<p>This other day i was as usual obeserving moon and then i started hearing weird noices along with this....</p>
+										<a class="btn btn-mini" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+									</div>
+                            	</div>
+                        	</li>
+                        	<li class="col-sm-4">
+								<div class="fff">
+									<div class="thumbnail">
+										<a href="#"><img src="images/fall/brianna-tucker-xtpQx26ABbM-unsplash.jpg" alt=""></a>
+									</div>
+									<div class="caption">
+										<h4>Pumpkin season is here to stay !!!</h4>
+										<p>No reallly pumpkins want be really going after this...</p>
+										<a class="btn btn-mini" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+									</div>
+                            	</div>
+                        	</li>
+                    	</ul>
+            		</div><!-- /Slide2 --> 
+        		</div>
+        
+       
+	   		<nav>
+				<ul class="control-box pager">
+					<li><a data-slide="prev" href="#myCarousel" class=""><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
+					<li><a data-slide="next" href="#myCarousel" class=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+				</ul>
+			</nav>
+	   		<!-- /.control-box -->   
+                              
+   	 		</div><!-- /#myCarousel -->
+    	</div>
+    </div>
+
+
+			<section class="pricing-table">
+			<div id="pricing">
+			<div class="container">
+				<div class="block-heading">
+					<h2>Our Pricing</h2>
+					<p>Various Subscription packages you can subscribe to.</p>
+				</div>
+				<div class="row justify-content-md-center">
+					<div class="col-md-5 col-lg-4">
+						<div class="item">
+							<div class="heading">
+								<h3>BASIC</h3>
+							</div>
+							<p>If you are just looking for just check out the coontent than this is best plan.</p>
+							<div class="features">
+								<h4><span class="feature">Full Support</span> : <span class="value">No</span></h4>
+								<h4><span class="feature">Duration</span> : <span class="value">30 Days</span></h4>
+								<h4><span class="feature">Downloads</span> : <span class="value">10GB</span></h4>
+							</div>
+							<div class="price">
+								<h4>$25</h4>
+							</div>
+							<a href="register.php" class="btn btn-block btn-outline-primary" type="submit">BUY NOW</button></a>
+						</div>
+					</div>
+					<div class="col-md-5 col-lg-4">
+						<div class="item">
+							<div class="ribbon">Best Value</div>
+							<div class="heading">
+								<h3>PRO</h3>
+							</div>
+							<p>Best plan for content ediotrs, fellow photographers, picture editors. With images it will also include tips for photographers.</p>
+							<div class="features">
+								<h4><span class="feature">Full Support</span> : <span class="value">Yes</span></h4>
+								<h4><span class="feature">Duration</span> : <span class="value">60 Days</span></h4>
+								<h4><span class="feature">Downloads</span> : <span class="value">50GB</span></h4>
+							</div>
+							<div class="price">
+								<h4>$50</h4>
+							</div>
+							<a href="register.php" class="btn btn-block btn-primary" type="submit">BUY NOW</button></a>
+						</div>
+					</div>
+					<div class="col-md-5 col-lg-4">
+						<div class="item">
+							<div class="heading">
+								<h3>PREMIUM</h3>
+							</div>
+							<p>This will unlock all the images for download and extra tips for photography.</p>
+							<div class="features">
+								<h4><span class="feature">Full Support</span> : <span class="value">Yes</span></h4>
+								<h4><span class="feature">Duration</span> : <span class="value">120 Days</span></h4>
+								<h4><span class="feature">Downloads</span> : <span class="value">150GB</span></h4>
+							</div>
+							<div class="price">
+								<h4>$150</h4>
+							</div>
+							<a href="register.php" class="btn btn-block btn-outline-primary" type="submit">BUY NOW</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+    
+    
+    <div id="contact">
+    	<div class="container">
+    		<h2>Contact Us</h2>  
+    		<p>If you loved my work and want to get in contact with me, you can do just that by filling these little details and send message to me.</p>
+    		<div class="col-md-6">
+    			<div class="contact-form">
+					<form action="#" method="post">
+						<input id="name" name="name" type="text" placeholder="Name:" required>
+						<input id="email" name="email" type="text" placeholder="Email:" required>
+						<input id="subject" name="subject" type="subject" placeholder="Subject:" required>
+						<textarea id="message" name="message" placeholder="Your Message:" rows="5" required></textarea>
+						<br>
+						<button name="submit" id="submit" type="submit">Send Message</button>
+					</form>
+				</div>  
+			</div>	
+			<div class="col-md-6">
+				<div class="image">
+					<img src="images/Summer/sai-kiran-anagani-83zRhEhFMfo-unsplash.jpg" class="img-responsive">
+				</div>
+			</div>
+    	</div>
+
+		<iframe src="" scrolling="no" style="height: 10px; border: 0px none; width: 619px; margin-top:10px">
+</iframe>
+		
+		<img src="images/moon.jpg" alt="moon" style="width:1500px;height:750px;">
+    </div>
+    
+    
+    <div id="subscribe">
+    	<div class="container">
+    	    <h2>Subscribe To Us</h2>
+    	    <p>By giving us your email-adress we will reguarly update you on new content.</p>
+			<div class="col-md-8 col-md-offset-2">
+             	<form action="#">
+              		<div class="input-group">
+                 		<input class="btn btn-lg" name="email" id="email" type="email" placeholder="Enter your email address" required>
+                 		<button class="btn btn-info btn-lg" type="submit">Submit</button>
+             		 </div>
+            	</form>
+			</div>  
+    	</div>
+    </div>
+    
+	<div class="footer">
+  		<div class="container">
+   			<p class="text-muted">Copyright 2022 | All Rights Reserved.</p>
+  		</div>
+	</div>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/jquery.isotope.js"></script>
+    
+    <script src="js/jquery.scrollUp.min.js"></script>
+    
+    
+	<script type="text/javascript">
+	
+	$('a[href^="#"]').on('click', function(event) {
+    	var target = $(this.getAttribute('href'));
+    	if( target.length ) {
+       		event.preventDefault();
+        	$('html, body').stop().animate({
+            	scrollTop: target.offset().top
+        	}, 1000);
+    	}
+	});
+
+	</script>
+    
+    
+    <!-- Navbar Change on Scroll -->
+	<script type="text/javascript">
+		$(function(){
+ 		var shrinkHeader = 100;
+  		$(window).scroll(function() {
+    		var scroll = getCurrentScroll();
+      		if ( scroll >= shrinkHeader ) {
+           		$('.navbar-default').addClass('shrink');
+        	}
+       		else {
+            	$('.navbar-default').removeClass('shrink');
+        	}
+  		});
+		function getCurrentScroll() {
+    		return window.pageYOffset || document.documentElement.scrollTop;
+    	}
+	});
+
+	</script>    
+
+
+	<!-- Portfolio Isotope Settings -->
+	<script type="text/javascript">
+
+	$(window).load(function(){
+  
+  
+ 	 var $container = $('.portfolioContainer'),
+     	$body = $('body'),
+     	colW = 375,
+      	columns = null;
+
+  
+  	$container.isotope({
+    // disable window resizing
+    	resizable: true,
+   	 	masonry: {
+        columnWidth: colW
+    	}
+  	});
+  
+  	$(window).smartresize(function(){
+    // check if columns has changed
+    	var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+    	if ( currentColumns !== columns ) {
+      	// set new column count
+      	columns = currentColumns;
+      	// apply width to container manually, then trigger relayout
+      	$container.width( columns * colW )
+        	.isotope('reLayout');
+    	}
+    
+  	}).smartresize(); // trigger resize to set container width
+  	$('.portfolioFilter a').click(function(){
+        	$('.portfolioFilter .current').removeClass('current');
+        	$(this).addClass('current');
+ 
+        	var selector = $(this).attr('data-filter');
+        	$container.isotope({
+			
+            filter: selector,
+         });
+        	 return false;
+   	 	});
+  
+	});
+
+	</script>
+	
+	
+	<!-- Scroll To Top Settings -->
+    <script type="text/javascript">
+    
+    $(function () {
+  		$.scrollUp({
+    		scrollName: 'scrollUp', // Element ID
+    		topDistance: '300', // Distance from top before showing element (px)
+    		topSpeed: 600, // Speed back to top (ms)
+    		animation: 'fade', // Fade, slide, none
+    		animationInSpeed: 200, // Animation in speed (ms)
+    		animationOutSpeed: 200, // Animation out speed (ms)
+    		activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+    		scrollImg: true,
+  		});
+	});
+    
+    </script>
+
+	
+</body>
+
+</html>
