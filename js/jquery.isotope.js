@@ -1,7 +1,4 @@
-/**
 
-
-*/
 
 (function( window, $, undefined ){
 
@@ -16,8 +13,7 @@
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
-  // ========================= getStyleProperty by kangax ===============================
-  // http://perfectionkills.com/feature-testing-css-properties/
+  
 
   var prefixes = 'Moz Webkit O Ms'.split(' ');
 
@@ -46,26 +42,7 @@
       transitionProp = getStyleProperty('transitionProperty');
 
 
-  // ========================= miniModernizr ===============================
-  // <3<3<3 and thanks to Faruk and Paul for doing the heavy lifting
 
-  /*!
-   * Modernizr v1.6ish: miniModernizr for Isotope
-   * http://www.modernizr.com
-   *
-   * Developed by:
-   * - Faruk Ates  http://farukat.es/
-   * - Paul Irish  http://paulirish.com/
-   *
-   * Copyright (c) 2009-2010
-   * Dual-licensed under the BSD or MIT licenses.
-   * http://www.modernizr.com/license/
-   */
-
-  /*
-   * This version whittles down the script just to check support for
-   * CSS transitions, transforms, and 3D transforms.
-  */
 
   var tests = {
     csstransforms: function() {
@@ -98,15 +75,15 @@
   var testName;
 
   if ( Modernizr ) {
-    // if there's a previous Modernzir, check if there are necessary tests
+    
     for ( testName in tests) {
       if ( !Modernizr.hasOwnProperty( testName ) ) {
-        // if test hasn't been run, use addTest to run it
+       
         Modernizr.addTest( testName, tests[ testName ] );
       }
     }
   } else {
-    // or create new mini Modernizr that just has the 3 tests
+    
     Modernizr = window.Modernizr = {
       _version : '1.6ish: miniModernizr for Isotope'
     };
@@ -126,14 +103,7 @@
   }
 
 
-  // ========================= isoTransform ===============================
-
-  /**
-   *  provides hooks for .css({ scale: value, translate: [x, y] })
-   *  Progressively enhanced CSS transforms
-   *  Uses hardware accelerated 3D transforms for Safari
-   *  or falls back to 2D transforms.
-   */
+ 
 
   if ( Modernizr.csstransforms ) {
 
@@ -220,18 +190,7 @@
     $.cssHooks.translate = {
       set: function( elem, value ) {
 
-        // uncomment this bit if you want to properly parse strings
-        // if ( typeof value === 'string' ) {
-        //   value = value.split(' ');
-        // }
-        //
-        // var i, val;
-        // for ( i = 0; i < 2; i++ ) {
-        //   val = value[i];
-        //   if ( typeof val === 'string' ) {
-        //     val = parseInt( val );
-        //   }
-        // }
+       
 
         setIsoTransform( elem, 'translate', value );
       },
@@ -244,7 +203,7 @@
 
   }
 
-  // ========================= get transition-end event ===============================
+ 
   var transitionEndEvent, transitionDurProp;
 
   if ( Modernizr.csstransitions ) {
@@ -258,17 +217,7 @@
     transitionDurProp = getStyleProperty('transitionDuration');
   }
 
-  // ========================= smartresize ===============================
-
-  /*
-   * smartresize: debounced resize event for jQuery
-   *
-   * latest version and complete README available on Github:
-   * https://github.com/louisremi/jquery.smartresize.js
-   *
-   * Copyright 2011 @louis_remi
-   * Licensed under the MIT license.
-   */
+  
 
   var $event = $.event,
       dispatchMethod = $.event.handle ? 'handle' : 'dispatch',
@@ -302,7 +251,7 @@
 
 
 
-// ========================= Isotope ===============================
+
 
 
   // our "Widget" object constructor
@@ -465,8 +414,7 @@
       }
     },
 
-    // ====================== updaters ====================== //
-    // kind of like setters
+    
 
     _updateAnimationEngine : function() {
       var animationEngine = this.options.animationEngine.toLowerCase().replace( /[ _\-]/g, '');
@@ -505,7 +453,7 @@
     },
 
 
-    // ====================== Filtering ======================
+    
 
     _filter : function( $atoms ) {
       var filter = this.options.filter === '' ? '*' : this.options.filter;
@@ -1351,13 +1299,7 @@
     }
   };
 
-  // =======================  Plugin bridge  ===============================
-  // leverages data method to either create or return $.Isotope constructor
-  // A bit from jQuery UI
-  //   https://github.com/jquery/jquery-ui/blob/master/ui/jquery.ui.widget.js
-  // A bit from jcarousel
-  //   https://github.com/jsor/jcarousel/blob/master/lib/jquery.jcarousel.js
-
+ 
   $.fn.isotope = function( options, callback ) {
     if ( typeof options === 'string' ) {
       // call method
